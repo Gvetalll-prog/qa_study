@@ -9,6 +9,10 @@ def check_access(year):
 
     age = current_year - year
 
+    # Vampires check (older than 100 years)
+    if age > 100:
+        return f"ERROR: Age is {age}. You are too old or a vampire!"
+    
     if age >= 18:
         return f"SUCCESS: Age is {age}. Access granted."
     else:
